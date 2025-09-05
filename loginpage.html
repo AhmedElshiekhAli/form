@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+        .logo-bg {
+            background: #123;
+        }
+
+        .floating-particles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .particle {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: float 15s linear infinite;
+        }
+
+        .particle:nth-child(1) {
+            width: 4px;
+            height: 4px;
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .particle:nth-child(2) {
+            width: 6px;
+            height: 6px;
+            top: 60%;
+            left: 80%;
+            animation-delay: -3s;
+        }
+
+        .particle:nth-child(3) {
+            width: 3px;
+            height: 3px;
+            top: 80%;
+            left: 30%;
+            animation-delay: -6s;
+        }
+
+        .particle:nth-child(4) {
+            width: 5px;
+            height: 5px;
+            top: 40%;
+            left: 70%;
+            animation-delay: -9s;
+        }
+
+        .particle:nth-child(5) {
+            width: 4px;
+            height: 4px;
+            top: 10%;
+            left: 50%;
+            animation-delay: -12s;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px) translateX(0px);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-100vh) translateX(50px);
+                opacity: 0;
+            }
+        }
+
+        .logo-container {
+            backdrop-filter: blur(20px);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+
+        .logo-shine {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .logo-shine::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            animation: shine 3s infinite;
+        }
+
+        @keyframes shine {
+            0% {
+                transform: translateX(-100%) translateY(-100%) rotate(45deg);
+            }
+
+            50% {
+                transform: translateX(100%) translateY(100%) rotate(45deg);
+            }
+
+            100% {
+                transform: translateX(-100%) translateY(-100%) rotate(45deg);
+            }
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 50%, #e2e8f0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen logo-bg flex flex-col items-center justify-center p-4">
+
+    <!-- خلفية متحركة -->
+    <div class="floating-particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <!-- اللوجو -->
+    <div class="logo-container rounded-3xl p-12 text-center max-w-4xl w-full logo-shine mb-8">
+        <h1 class="text-6xl md:text-7xl font-bold text-gradient mb-4" style="font-family: 'Playfair Display', serif;">
+            Elshiekh</h1>
+        <p class="text-xl text-gray-200 font-light mb-8" style="font-family: 'Inter', sans-serif;">
+            التميز • الابتكار • القيادة
+        </p>
+    </div>
+
+    <!-- فورم تسجيل الدخول -->
+    <h2 class="header text-white text-2xl font-bold mb-4">Login In The Page</h2>
+    <form class="form bg-white/10 backdrop-blur-md p-6 rounded-xl shadow-lg w-full max-w-md" name="myForm"
+        action="dachpord.html" onsubmit="return validateForm()" method="post">
+
+        <input class="block w-full mb-4 p-3 rounded-lg border border-gray-300 text-black" type="text" id="Name"
+            placeholder="Enter Your Name" required title="Please Enter Your Name" autocomplete="off">
+
+        <input class="block w-full mb-4 p-3 rounded-lg border border-gray-300 text-black" type="password" id="password"
+            placeholder="Enter Your Password" required title="Please Enter Your Password" autocomplete="off">
+
+        <button
+            class="block w-full bg-amber-500 hover:bg-amber-600 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300"
+            type="button" id="Submit" onclick="validateForm()">Login</button>
+    </form>
+
+    <p id="demo" class="mt-4 text-white"></p>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

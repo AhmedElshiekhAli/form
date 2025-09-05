@@ -1,0 +1,39 @@
+.form{
+    
+    text-align: center;
+    justify-content: space-between;
+    display: block;
+
+    margin-left: 850px;
+}
+.header{
+    align-items: center;
+        text-align: center;
+        font-size: 50px;
+        color: rgb(255, 255, 255);
+}
+#demo{
+    align-items: center;
+        text-align: center;
+        font-size: 50px;
+        color: rgb(27, 99, 170);
+}
+body{
+    background-color:#123;
+}
+#Name{
+    height: 20px;
+    width: 160px;
+}
+#password{
+    height: 20px;
+        width: 160px;
+}
+.block
+{
+    display: block;
+    text-align: center;
+    align-items: center;
+    margin: 20px;
+
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f8f9fa;
+            font-family: 'Inter', 'Segoe UI', 'Roboto', sans-serif;
+            font-size: 16px;
+            color: #212529;
+        }
+
+        .form {
+            width: 400px;
+            padding: 30px;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .form h3 {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 25px;
+            color: #333;
+        }
+
+        .form_1 input {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            margin: 15px 0;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .form_1 input:focus {
+            border-color: #007bff;
+            outline: none;
+            box-shadow: 0 0 6px rgba(0, 123, 255, 0.3);
+        }
+
+        .form_1 button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            background: #007bff;
+            color: #fff;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .form_1 button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form" id="form_a">
+        <h3>التسجيل</h3>
+        <div class="form_1">
+            <input id="input_name101" type="text" placeholder="Enter Your Name" required autocomplete="off">
+            <input id="input_Email" type="email" placeholder="Enter Your Email" required autocomplete="off">
+            <input id="input_Number" type="text" placeholder="Enter Your Number" required autocomplete="off">
+            <button type="button" onclick="collectData()">Submit</button>
+        </div>
+    </div>
+
+    <script>
+        function collectData() {
+            let name = document.getElementById("input_name101").value;
+            let email = document.getElementById("input_Email").value;
+            let number = document.getElementById("input_Number").value;
+
+          
+        }
+    </script>
+    <script src="collectDataClient.js"></script>
+</body>
+
+</html>

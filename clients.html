@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Clints</title>
+    <link rel="stylesheet" href="css/style_clients.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        .search-box {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 8px 12px;
+            width: 280px;
+            background: #fff;
+        }
+
+        .search-box i {
+            color: #666;
+            margin-inline-end: 8px;
+            /* للمسافة بين الأيقونة و الـ input */
+        }
+
+        .search-box input {
+            border: none;
+            outline: none;
+            flex: 1;
+            /* ياخد بقية المساحة */
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- header -->
+    <section class="main_clients">
+        <div class="header">
+            <h1>Clients</h1>
+
+            <button class="add-btn" onclick="window.location.href='forms.html'">
+                + Add Client
+            </button>
+
+        </div>
+        <!-- search and Filter -->
+        <div class="controls">
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search...">
+            </div>
+            <select name="" id="" class="seclect_item">
+                <option value="all">All</option>
+                <option value="active">Active</option>
+                <option value="inactive">Inactive</option>
+            </select>
+        </div>
+        <!-- starts Cards -->
+        <div class="stats">
+            <div class="card">
+                <p>Total Clients</p>
+                <p>120</p>
+            </div>
+            <div class="card">
+                <p>Active Clients</p>
+                <p>95</p>
+            </div>
+            <div class="card">
+                <p>Inactive Clients: </p>
+                <p>25</p>
+            </div>
+        </div>
+
+        <!-- table -->
+        <div class="table">
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Avater</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>👤</td>
+                        <td id="q101">Ahemd Elshiekh</td>
+                        <td id="a101">Ahemd@gmail.com</td>
+                        <td id="z101">01010630485</td>
+                        <td><span class="active">Active</span></td>
+                        <td>✏️ 🗑</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+    </section>
+
+    <script src="collectDataClient.js"></script>
+
+
+</body>
+
+</html>
